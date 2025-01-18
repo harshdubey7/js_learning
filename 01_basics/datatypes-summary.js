@@ -51,3 +51,34 @@ const myFunction=function(){
 }
 
 console.log(typeof myFunction);
+
+//********************************************** */
+//Memory in javascript
+
+
+//two types of memory
+//1.stack 2.heap
+//primitive datatype=>stack ,yaha variable ka ek copy milta hai
+//non primitive =>heap , yaha reference milta hai that is jo bhi change karenge original ke andar change ho jaayega
+
+
+//examples
+
+let name = "harsh"
+let anotherName = name   //since yaha pe anotherName ke andar name ko liya tha hence jo bhi content name ka hoga wo anotherName ko mil jaayega
+                            //but name ke value ka ek copy mila hai tum anotherName me kuchh bhi change karte raho name ko kuchh nahi hone waala
+anotherName="dubey"
+console.log(anotherName);
+console.log(name);
+
+let userOne = {
+    email:"user@gmail.com",
+    upi:"user@oksbi"
+}
+
+let userTwo=userOne;    //now yaha userTwo ko userOne ka reference hi mil gaya i.e jis content ko userOne point kar raha hai usi ko UserTwo bhi kar raha hai hence agar userTwo koi change kiya content me to wo userOne ke bhi copntent me ho jaayega
+userTwo.email="harsh@gmail"
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
